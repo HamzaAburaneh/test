@@ -14,7 +14,7 @@
     <!-- Load closure template scripts -->
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/rn/cdts/compiled/soyutils.js"></script>
 
-    <script th:src="${'https://www.canada.ca/etc/designs/canada/cdts/gcweb/rn/cdts/compiled/wet-en.js'}"></script>
+    <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/rn/cdts/compiled/wet-en.js"></script>
 
     <noscript>
         <!-- Write closure fall-back static file -->
@@ -42,11 +42,11 @@
             cdnEnv: "prod",
             appName: [
                 {
-                    text: "[[#{title}]]",
+                    text: "Page Feedback",
                     href: "/pageFeedback",
                 },
             ],
-            menuPath: "/menu/admin_[[${session.lang}]].html",
+            menuPath: "/menu/admin.html",
             signOut: [
                 {
                     href: "/logout",
@@ -54,14 +54,14 @@
             ],
             lngLinks: [
                 {
-                    lang: "[[${session.altLang}]]",
-                    href: "[[${session.langUrl}]]",
-                    text: "[[${session.altLangText}]]",
+                    lang: "Alternative Language",
+                    href: "#",
+                    text: "Language Text",
                 },
             ],
         });
     </script>
-    <th:block layout:fragment="content">
+    <div>
         <main>
             <h2>Page Feedback Tool</h2>
             <form class="feedback-tool">
@@ -241,13 +241,7 @@
                 showFeedback: false,
             });
         </script>
-    </th:block>
-    <th:block layout:fragment="script">
-        <script
-            src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-1.13.10/b-2.4.2/b-html5-2.4.2/cr-1.7.0/fh-3.4.0/r-2.5.0/datatables.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    </th:block>
+    </div>
     <div id="def-footer">
         <!-- Write closure fall-back static file -->
         <!-- /ROOT/app/cls/WET/gcweb/v4_0_29/cdts/static/footer-${lang}.html -->
