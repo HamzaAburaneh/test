@@ -1,220 +1,219 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif !important;
 }
 
 main>* {
-    width: 75%;
-    margin: 0 auto;
+    width: 75% !important;
+    margin: 0 auto !important;
 }
 
 .feedback-tool {
-    padding: 1em;
-    border: 5px solid #000000;
-    margin-top: 1ch;
-    display: grid;
-    grid-template-columns: 1fr 1fr 3fr;
-    grid-auto-rows: auto;
-    position: relative;
+    padding: 1em !important;
+    border: 5px solid #000000 !important;
+    margin-top: 1ch !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 3fr !important;
+    grid-auto-rows: auto !important;
+    position: relative !important;
     /* Add position relative to the feedback tool */
 }
 
-
 .feedback-tool-data {
-    width: 80%;
-    padding: 1em;
-    border: 2px solid #000000;
-    margin-top: 2ch;
+    width: 80% !important;
+    padding: 1em !important;
+    border: 2px solid #000000 !important;
+    margin-top: 2ch !important;
 }
 
 .feedback-tool label {
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 .feedback-tool label+label {
-    margin-top: 1ch;
+    margin-top: 1ch !important;
 }
 
 .feedback-tool>h3 {
-    grid-column: 1 / 1;
-    margin: 0;
-    font-weight: normal;
+    grid-column: 1 / 1 !important;
+    margin: 0 !important;
+    font-weight: normal !important;
 }
 
 .feedback-tool> :not(.download-section):not(h3) {
-    grid-column: 2 / span 2;
-    display: grid;
-    grid-template-columns: subgrid;
-    align-items: center;
+    grid-column: 2 / span 2 !important;
+    display: grid !important;
+    grid-template-columns: subgrid !important;
+    align-items: center !important;
 }
 
 .feedback-tool>details>label {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: span 2;
+    display: grid !important;
+    grid-template-columns: subgrid !important;
+    grid-column: span 2 !important;
 }
 
 .feedback-tool input,
 .feedback-tool select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100% !important;
+    padding: 10px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
 }
 
 .download-section {
-    text-align: right;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    grid-column: 3;
-    padding: 0;
-    margin: 0;
+    text-align: right !important;
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    justify-content: flex-end !important;
+    grid-column: 3 !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .download-section>button {
-    width: max-content;
+    width: max-content !important;
 }
 
 .download-section>button+button {
-    margin-left: 1em;
+    margin-left: 1em !important;
 }
 
 #downloadCSV,
 #downloadExcel {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 10px 20px !important;
+    border: none !important;
+    background-color: #007bff !important;
+    color: white !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
 }
 
 #downloadCSV:hover,
 #downloadExcel:hover {
-    background-color: #0056b3;
+    background-color: #0056b3 !important;
 }
 
 .feedback-tool>details>summary~* {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: grid !important;
+    grid-template-columns: 1fr 3fr !important;
 }
 
 .feedback-tool>details {
-    margin-top: 1em;
+    margin-top: 1em !important;
 }
 
 .feedback-tool input,
 .feedback-tool select {
-    width: max-content;
+    width: max-content !important;
 }
 
 #dateRange option {
-    padding: 5px;
+    padding: 5px !important;
     /* Adjust the padding as needed */
 }
 
 .feedback-tool>details>p {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    align-items: center !important;
 }
 
 .feedback-tool>details>p>label {
-    display: flex;
-    flex-flow: row nowrap;
-    width: 30%;
-    align-items: center;
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    width: 30% !important;
+    align-items: center !important;
 }
 
 .feedback-tool>details select {
-    margin-left: 1em;
+    margin-left: 1em !important;
 }
 
 .spacer {
-    margin: 0 2em;
+    margin: 0 2em !important;
 }
 
 summary {
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 summary {
     display: list-item !important;
-    list-style-type: none;
-    list-style-type: disclosure-closed;
-    visibility: visible !important
+    list-style-type: none !important;
+    list-style-type: disclosure-closed !important;
+    visibility: visible !important;
 }
 
 details .out details summary,
 details:not([open]) details summary {
-    display: none !important
+    display: none !important;
 }
 
 details {
-    margin-bottom: .25em
+    margin-bottom: .25em !important;
 }
 
-
 details summary {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    color: #000000;
-    padding: 5px 15px
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    color: #000000 !important;
+    padding: 5px 15px !important;
 }
 
 #dateRange .separator::after {
-    content: ' ';
-    display: block;
-    height: 10px;
+    content: ' ' !important;
+    display: block !important;
+    height: 10px !important;
 }
-
 
 details summary:focus,
 details summary:hover {
-    background-color: transparent;
-    color: #000000;
-    text-decoration: underline
+    background-color: transparent !important;
+    color: #000000 !important;
+    text-decoration: underline !important;
 }
 
 details summary:focus {
-    outline-style: dotted;
-    outline-width: 1px
+    outline-style: dotted !important;
+    outline-width: 1px !important;
 }
 
 details[open] {
-    border: 1px solid #ddd;
-    border-radius: 4px
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
 }
 
-
 details:not([open]) {
-    visibility: hidden
+    visibility: hidden !important;
 }
 
 details:not([open])>*,
 details:not([open])>details {
-    display: none
+    display: none !important;
 }
+
 .dt-buttons {
-    display: none;
+    display: none !important;
 }
+
 .feedback-tool-header {
-    display: flex;
-    justify-content: flex-end;
+    display: flex !important;
+    justify-content: flex-end !important;
     /* Align items to the right */
-    position: absolute;
+    position: absolute !important;
     /* Absolute position */
-    right: 1em;
+    right: 1em !important;
     /* Same as padding to align with the form fields */
-    top: 1em;
+    top: 1em !important;
     /* Same as padding from the top */
 }
 
 .reset-filters {
-    cursor: pointer;
-    text-decoration: underline;
-    white-space: nowrap;
+    cursor: pointer !important;
+    text-decoration: underline !important;
+    white-space: nowrap !important;
 }
+
 .alpha-top {
     font-size: 1.5rem;
     background-color: #b8d7ff;

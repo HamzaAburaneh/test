@@ -12,14 +12,13 @@
         href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-1.13.10/b-2.4.2/b-html5-2.4.2/cr-1.7.0/fh-3.4.0/r-2.5.0/datatables.min.css"
         rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="pageFeedback_styles.css" />
     <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
     <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet" type="text/css" />
     <!-- Load closure template scripts -->
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/rn/cdts/compiled/soyutils.js"></script>
 
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/rn/cdts/compiled/wet-en.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="pageFeedback_styles.css" /> -->
-
 
     <noscript>
         <!-- Write closure fall-back static file -->
@@ -30,7 +29,7 @@
     <script>
         document.write(wet.builder.refTop({ isApplication: true, cdnEnv: "prod" }));
     </script>
-    <link rel="stylesheet" type="text/css" href="pageFeedback_styles.css" />
+
 </head>
 
 
@@ -744,7 +743,6 @@
         src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-1.13.10/b-2.4.2/b-html5-2.4.2/cr-1.7.0/fh-3.4.0/r-2.5.0/datatables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="pageFeedback_styles.css" />
     <script>
         $(document).ready(function () {
             new DataTable('#myTable', {
@@ -798,14 +796,6 @@
 
 
         });
-    </script>
-    <script>
-        window.onload = function () {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'pageFeedback_styles.css';
-            document.head.appendChild(link);
-        }
     </script>
 </body>
 
