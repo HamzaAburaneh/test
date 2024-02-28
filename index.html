@@ -1,20 +1,66 @@
 <!DOCTYPE html>
 
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+        type="text/css" />
+    <link
+        href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-1.13.10/b-2.4.2/b-html5-2.4.2/cr-1.7.0/fh-3.4.0/r-2.5.0/datatables.min.css"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="pageFeedback_styles.css" />
+    <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
+    <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet" type="text/css" />
+    <!-- Load closure template scripts -->
+    <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/rn/cdts/compiled/soyutils.js"></script>
 
-<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-    type="text/css" />
-<link
-    href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-1.13.10/b-2.4.2/b-html5-2.4.2/cr-1.7.0/fh-3.4.0/r-2.5.0/datatables.min.css"
-    rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-<link rel="stylesheet" type="text/css" href="pageFeedback_styles.css" />
-<script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
-<link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet" type="text/css" />
+    <script th:src="${'https://www.canada.ca/etc/designs/canada/cdts/gcweb/rn/cdts/compiled/wet-en.js'}"></script>
+
+    <noscript>
+        <!-- Write closure fall-back static file -->
+        <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/static/refTop.html -->
+        <!--#include virtual="/app/cls/WET/gcweb/v4_0_28/cdts/static/refTop.html" -->
+    </noscript>
+    <!-- Write closure template -->
+    <script>
+        document.write(wet.builder.refTop({ isApplication: true, cdnEnv: "prod" }));
+    </script>
+
 </head>
 
 
 <body>
+    <div id="def-top">
+        <!-- Write closure fall-back static file -->
+        <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/static/top-${lang}.html -->
+        <!--#include virtual="/app/cls/WET/gcweb/v4_0_28/cdts/static/top-${lang}.html" -->
+    </div>
+    <!-- Write closure template -->
+    <script>
+        var defTop = document.getElementById("def-top");
+        defTop.outerHTML = wet.builder.appTop({
+            cdnEnv: "prod",
+            appName: [
+                {
+                    text: "[[#{title}]]",
+                    href: "/pageFeedback",
+                },
+            ],
+            menuPath: "/menu/admin_[[${session.lang}]].html",
+            signOut: [
+                {
+                    href: "/logout",
+                },
+            ],
+            lngLinks: [
+                {
+                    lang: "[[${session.altLang}]]",
+                    href: "[[${session.langUrl}]]",
+                    text: "[[${session.altLangText}]]",
+                },
+            ],
+        });
+    </script>
     <th:block layout:fragment="content">
         <main>
             <h2>Page Feedback Tool</h2>
@@ -160,27 +206,41 @@
                     <button id="downloadExcel">Download Excel</button>
                 </p>
             </form>
+            <div class="feedback-tool-data">
+                <table id="myTable" class="display">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Comments</th>
+                            <th>Dept</th>
+                            <th>Page title</th>
+                            <th>URL</th>
+                            <th>Time stamp</th>
+                            <th>Language</th>
+                            <th>Section</th>
+                            <th>Theme</th>
+                            <th>Device type</th>
+                            <th>Browser</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </main>
-        <div class="feedback-tool-data">
-            <table id="myTable" class="display">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Comments</th>
-                        <th>Dept</th>
-                        <th>Page title</th>
-                        <th>URL</th>
-                        <th>Time stamp</th>
-                        <th>Language</th>
-                        <th>Section</th>
-                        <th>Theme</th>
-                        <th>Device type</th>
-                        <th>Browser</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+        <div id="def-preFooter">
+            <!-- Write closure fall-back static file -->
+            <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/static/preFooter-${lang}.html -->
+            <!--#include virtual="/app/cls/WET/gcweb/v4_0_28/cdts/static/preFooter-${lang}.html" -->
         </div>
+        <!-- Write closure template -->
+        <script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                dateModified: "Jan 9th, 2024",
+                showShare: false,
+                showFeedback: false,
+            });
+        </script>
     </th:block>
     <th:block layout:fragment="script">
         <script
@@ -188,6 +248,36 @@
         <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     </th:block>
+    <div id="def-footer">
+        <!-- Write closure fall-back static file -->
+        <!-- /ROOT/app/cls/WET/gcweb/v4_0_29/cdts/static/footer-${lang}.html -->
+        <!--#include virtual="/app/cls/WET/gcweb/v4_0_29/cdts/static/footer-${lang}.html" -->
+    </div>
+    <!-- Write closure template -->
+    <script>
+        var defFooter = document.getElementById("def-footer");
+        defFooter.outerHTML = wet.builder.appFooter({
+            cdnEnv: "prod",
+            showFeatures: false,
+            "footerSections": [{
+                "href": "https://design.canada.ca/feedback/index.html",
+                "text": "Page feedback tool guidance",
+                "newWindow": true
+            }, {
+                "href": "https://design.canada.ca/survey/index.html",
+                "text": "Task success survey guidance",
+                "newWindow": true
+            }, {
+                "href": "mailto:cds.dto-btn.snc@servicecanada.gc.ca",
+                "text": "Contact us",
+                "newWindow": true
+            }]
+        });
+    </script>
+    <!-- Write closure template -->
+    <script>
+        document.write(wet.builder.refFooter({ cdnEnv: "prod", isApplication: true }));
+    </script>
 </body>
 
 </html>
