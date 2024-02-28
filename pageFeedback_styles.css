@@ -215,3 +215,66 @@ details:not([open])>details {
     text-decoration: underline;
     white-space: nowrap;
 }
+.alpha-top {
+    font-size: 1.5rem;
+    background-color: #b8d7ff;
+    z-index: 100;
+    font-family: "Poppins", sans-serif;
+    box-shadow: rgba(60, 64, 67, 0.1) 0 1px 2px 3px, rgba(60, 64, 67, 0.35) 0 2px 6px 2px;
+  }
+
+  .app-bar {
+    background: #334d6f !important;
+  }
+
+  #wb-sm {
+    background: rgb(27 27 27) !important;
+    border-top: 3px solid black !important;
+    border-bottom: 3px solid #ffffff !important;
+  }
+
+  #wb-sm .menu>li a:hover {
+    background-color: rgb(103, 109, 152) !important;
+    color: white !important;
+    transition-duration: 0.3s !important;
+  }
+
+  #wb-sm .menu .wb-navcurr {
+    color: white !important;
+    background: white !important;
+  }
+
+  #wb-sm .menu>li>.wb-navcurr {
+    color: black !important;
+  }
+
+  #wb-sm .menu>li>.wb-navcurr:hover {
+    color: black !important;
+    background-color: white !important;
+  }
+
+  #wb-sm .menu>li>a {
+    color: white !important;
+    transition-duration: 0.3s !important;
+  }
+
+  #wb-sm .menu>li a:focus,
+  #wb-sm .menu .active,
+  #wb-sm .menu .selected,
+  #wb-sm .sm.open li a:focus,
+  #wb-sm .sm.open li a:active,
+  #wb-sm .sm.open li summary:focus,
+  #wb-sm .sm.open li summary:active {
+    background: rgb(27, 27, 27) !important;
+  }
+
+  /*Menu bar - list items*/
+  #wb-sm .menu>li,
+  #wb-sm .menu>li:last-child {
+    border-color: rgb(27, 27, 27) !important;
+    border-width: 3px;
+  }
+
+  label {
+    margin-bottom: 0 !important;
+  }
