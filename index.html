@@ -732,7 +732,19 @@
     </script>
     <!-- Write closure template -->
     <script>
-        document.write(wet.builder.refFooter({ cdnEnv: "prod", isApplication: true }));
+        document.write(wet.builder.refFooter({ cdnEnv: "prod", isApplication: true })); 
+    </script>
+    <script>
+        $(document).ready(function () {
+            new DataTable('#myTable', {
+                order: [[0, "desc"]],
+                processing: true,
+                lengthMenu: false,
+                orderCellsTop: true,
+                fixedHeader: true,
+                dom: 'Br<"table-responsive"t>tip',
+            });
+        });
     </script>
 </body>
 
