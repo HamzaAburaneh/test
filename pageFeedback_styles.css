@@ -16,8 +16,7 @@ main>* {
     grid-auto-rows: auto;
     position: relative;
     /* Add position relative to the feedback tool */
-}
-
+} 
 
 .feedback-tool-data {
     width: 80%;
