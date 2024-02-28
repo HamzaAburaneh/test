@@ -757,11 +757,14 @@
                     closeOnSelect: false,
                 }
             });
+            var start = moment().subtract(29, 'days');
+            var end = moment();
+
             $("#dateRangePicker").daterangepicker(
                 {
                     opens: "left",
-                    startDate: moment(earliestDate),
-                    endDate: moment(latestDate),
+                    startDate: start,
+                    endDate: end,
                     alwaysShowCalendars: true,
                     locale: {
                         format: "YYYY-MM-DD",
@@ -787,6 +790,10 @@
                     );
                 }
             );
+            var start = moment().subtract(29, 'days');
+            var end = moment();
+
+
         });
     </script>
 </body>
