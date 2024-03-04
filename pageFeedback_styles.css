@@ -1,11 +1,16 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Noto sans", sans-serif;
 }
 
 /* main>* {
     width: 76%;
     margin: 0 auto;
 } */
+
+.feedback-tool .glyphicon {
+    opacity:.5;
+    padding-left: 5px; 
+}
 
 .daterangepicker .ranges li.active {
     background-color: #26374a;
