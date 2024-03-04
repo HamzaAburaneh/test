@@ -12,6 +12,10 @@ body {
     padding-left: 5px; 
 }
 
+.feedback-tool a:visited {
+    color: #284162;
+}
+
 .daterangepicker .ranges li.active {
     background-color: #26374a;
 }
