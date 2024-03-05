@@ -16,22 +16,6 @@
 
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/rn/cdts/compiled/wet-en.js"></script>
     
-    <script>
-        (function( $, wb ) {
-"use strict";
-
-wb.doc.on( "click", "#overlay-open-btn", function( event ) {
-	if ( event.stopPropagation ) {
-		event.stopImmediatePropagation();
-	} else {
-		event.cancelBubble = true;
-	}
-
-	$( "#" + $( "#overlay-select" ).val() ).trigger( "open.wb-overlay" );
-});
-
-})( jQuery, wb );
-    </script>
     <noscript>
         <!-- Write closure fall-back static file -->
         <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/static/refTop.html -->
@@ -80,8 +64,6 @@ wb.doc.on( "click", "#overlay-open-btn", function( event ) {
     <div>
 
         <main class="container">
-            <p><a href="#mid-screen-bg" aria-controls="mid-screen-bg" class="overlay-lnk" role="button">Middle screen overlay with background</a></p>
-
 <section id="mid-screen-bg" class="wb-overlay modal-content overlay-def wb-popup-mid overlay-bg">
 <header class="modal-header">
 	<h2 class="modal-title">Middle screen overlay with background</h2>
@@ -860,8 +842,23 @@ wb.doc.on( "click", "#overlay-open-btn", function( event ) {
         });
     </script>
 
-    <script src="https://wet-boew.github.io/v4.0-ci/wet-boew/js/wet-boew.min.js"></script>
-    <script src="https://wet-boew.github.io/v4.0-ci/demos/overlay/demo/overlay.min.js"></script>
+<script>
+    (function( $, wb ) {
+"use strict";
+
+wb.doc.on( "click", "#overlay-open-btn", function( event ) {
+if ( event.stopPropagation ) {
+    event.stopImmediatePropagation();
+} else {
+    event.cancelBubble = true;
+}
+
+$( "#" + $( "#overlay-select" ).val() ).trigger( "open.wb-overlay" );
+});
+
+})( jQuery, wb );
+</script>
+
 </body>
 
 </html>
