@@ -16,7 +16,22 @@
 
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/rn/cdts/compiled/wet-en.js"></script>
     
+    <script>
+        (function( $, wb ) {
+"use strict";
 
+wb.doc.on( "click", "#overlay-open-btn", function( event ) {
+	if ( event.stopPropagation ) {
+		event.stopImmediatePropagation();
+	} else {
+		event.cancelBubble = true;
+	}
+
+	$( "#" + $( "#overlay-select" ).val() ).trigger( "open.wb-overlay" );
+});
+
+})( jQuery, wb );
+    </script>
     <noscript>
         <!-- Write closure fall-back static file -->
         <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/static/refTop.html -->
@@ -65,53 +80,28 @@
     <div>
 
         <main class="container">
-            <p><a href="#centred-popup-modal" aria-controls="centred-popup-modal" class="wb-lbx lbx-modal" role="button">Centred popup - Modal (Lightbox + Modal)</a></p>
+            <p><a href="#mid-screen-bg" aria-controls="mid-screen-bg" class="overlay-lnk" role="button">Middle screen overlay with background</a></p>
 
-<section id="centred-popup-modal" class="mfp-hide modal-dialog modal-content overlay-def">
-	<header class="modal-header">
-		<h2 class="modal-title">Centred popup - Modal (Lightbox + Modal)</h2>
-	</header>
-	<div class="modal-body">
-		...
-	</div>
+<section id="mid-screen-bg" class="wb-overlay modal-content overlay-def wb-popup-mid overlay-bg">
+<header class="modal-header">
+	<h2 class="modal-title">Middle screen overlay with background</h2>
+</header>
+<div class="modal-body">
+	...
+</div>
 </section>
-<h2>On social media</h2>
-			<ul class="list-inline">
-				<li>
-					<a href="#facebook" class="facebook wb-lbx"><span class="wb-inv">Facebook: </span>FacebookPageName</a>
-				</li>
-				<li>
-					<a href="#" rel="external" class="twitter"><span class="wb-inv">X: </span>@XAccount</a>
-				</li>
-				<li>
-					<a href="#" rel="external" class="youtube"><span class="wb-inv">Youtube: </span>YouTubeName</a>
-				</li>
-				<li>
-					<a href="#" rel="external" class="instagram"><span class="wb-inv">Instagram: </span>InstagramName</a>
-				</li>
-				<li>
-					<a href="#" rel="external" class="linkedin"><span class="wb-inv">LinkedIn: </span>LinkedInName</a>
-				</li>
-			</ul>
-		</section>
-		<section id="facebook" class="modal-dialog modal-content overlay-def mfp-hide">
-			<header class="modal-header">
-				<h2 class="modal-title" id="lbx-title">Facebook</h2>
-			</header>
-			<div class="modal-body">
-				<ul class="list-unstyled lst-spcd">
-					<li>
-						<a href="#" rel="external">[First Facebook account title]</a>
-					</li>
-					<li>
-						<a href="#" rel="external">[Second Facebook account title]</a>
-					</li>
-				</ul>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-sm btn-primary pull-left popup-modal-dismiss">Close<span class="wb-inv">Close overlay</span></button>
-			</div>
-		</section>
+<label for="overlay-select">Overlay to open</label>
+<select id="overlay-select">
+	<option value="left-panel">Left panel</option>
+	<option value="right-panel">Right panel</option>
+	<option value="top-bar">Top bar</option>
+	<option value="bottom-bar">Bottom bar</option>
+	<option value="mid-screen">Middle screen overlay</option>
+	<option value="full-screen">Full-screen overlay</option>
+	<option value="hidden-header">Full-screen overlay - Hidden header</option>
+</select>
+<button id="overlay-open-btn">Open overlay</button>
+
             <div class="col-lg-12">
                 <div class="row">
             <h1 id="wb-cont">Page feedback comments</h1>
@@ -870,10 +860,8 @@
         });
     </script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
-        <script src="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/wet-boew.min.js"></script>
-        <script src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js"></script>
-    
+    <script src="https://wet-boew.github.io/v4.0-ci/wet-boew/js/wet-boew.min.js"></script>
+    <script src="https://wet-boew.github.io/v4.0-ci/demos/overlay/demo/overlay.min.js"></script>
 </body>
 
 </html>
