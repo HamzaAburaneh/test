@@ -78,14 +78,82 @@
                         <option value="en">English</option>
                         <option value="fr">French</option>
                     </select>
+                    <label for="pages">Report version </label>
+                        <select class="pages" id="version" name="version">
+                            <option value="r-v">2024-03-19</option>
+                        </select>
                 </div>
-                <label for="pages">Report version
-                    <select class="pages" id="version" name="version">
-                        <option value="r-v">2024-03-19</option>
-                    </select>
-                </label>
             </form>
         </div>
+    </div>
+
+    <style>
+        .feedback-tool { 
+            grid-template-columns: 0fr .7fr 3fr !important;
+        }
+
+
+
+        .score {
+            border: solid black 1px;
+            padding: 2em;
+            text-align: center;
+
+        }
+        .score h2 {
+            font-size: 24px;
+            margin-top: 0px;
+            padding-bottom: 10px;
+        }
+
+        .r-prcnt {
+            font-size: 56px;
+            font-weight: bold;
+        }
+        .pass {
+            background-color: green;
+        }
+
+        .fail {
+            background-color: red;
+        }
+        .x-sm {
+            font-size: 75%;
+        }
+        .score .no-space {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .equal {
+            font-size: 56px;
+            margin-top: 50%;
+            width: 50%;
+        }
+    </style>
+
+    <div class="col-md-12 score">
+        <div class="col-md-3">
+            <div class="col-md-12">
+                <h2>Overall score</h2>
+                <p class="r-prcnt">25%</p>
+                <p class="x-sm no-space">(1 pass out of 4 total)</p>
+            </div>        
+        </div>
+        <div class="col-md-1">
+            <p class="equal no-space ">=</p>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-12 pass">
+                # of pass
+            </div>        
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-12 fail">
+                # of fail
+            </div>
+        </div>
+        <p class="pull-right x-sm no-space ">A pass rating means the page is found in the top 3 results</p>
+
     </div>
            <div class="clearfix"></div>
         <div class="col-lg-12">
