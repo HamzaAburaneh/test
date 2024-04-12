@@ -113,10 +113,12 @@
         }
         .pass {
             background-color: green;
+            padding: 2em;
         }
 
         .fail {
             background-color: red;
+            padding: 2em;
         }
         .x-sm {
             font-size: 75%;
@@ -125,10 +127,16 @@
             margin-bottom: 0;
             padding-bottom: 0;
         }
+   
         .equal {
             font-size: 56px;
+        }
+
+        @media only screen and (min-width: 600px) {
+        .equal {
             margin-top: 50%;
-            width: 50%;
+            width: 50%; 
+            }
         }
     </style>
 
