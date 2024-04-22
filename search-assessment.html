@@ -8,6 +8,8 @@
         href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-1.13.10/b-2.4.2/b-html5-2.4.2/cr-1.7.0/fh-3.4.0/r-2.5.0/datatables.min.css"
         rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="pageFeedback_styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous"/>
+
     <!-- Load closure template scripts -->
     <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/rn/cdts/compiled/soyutils.js"></script>
 
@@ -21,8 +23,6 @@
     <script>
         document.write(wet.builder.refTop({ isApplication: true, cdnEnv: "prod" }));
     </script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-
 
 </head>
 
@@ -180,64 +180,6 @@
            <div class="clearfix"></div>
         <div class="col-lg-12">
             <div class="row">
-            <!-- <div class="feedback-tool-data">
-                <table id="myTable" class="display">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>$320,800</td>
-                        </tr>
-                        <tr>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>63</td>
-                            <td>2011-07-25</td>
-                            <td>$170,750</td>
-                        </tr>
-                        <tr>
-                            <td>Ashton Cox</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                            <td>66</td>
-                            <td>2009-01-12</td>
-                            <td>$86,000</td>
-                        </tr>
-                        <tr>
-                            <td>Cedric Kelly</td>
-                            <td>Senior Javascript Developer</td>
-                            <td>Edinburgh</td>
-                            <td>22</td>
-                            <td>2012-03-29</td>
-                            <td>$433,060</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                        </tr>
-                    </tfoot>
-                </table> 
-       </div> -->
 
        <style>
         .table .group-th th,  .table tr .group {
@@ -257,6 +199,15 @@
             font-weight:bold;
             padding: 5px 15px 5px 15px;
         }
+        
+        .fail-pill {
+            background-color: #e6aeae;
+            border-radius: 6px;
+            color: #561A1A;
+            text-align: center;
+            font-weight:bold;
+            padding: 5px 18px 5px 18px;
+        }
 
         .table .brdr-none {
             border-top: none;
@@ -266,7 +217,6 @@
             padding: 10px;
             line-height: 1.4375;
             vertical-align: top;
-            border-top: 2px solid #333;
         }
         
         .bdr-right {
@@ -275,6 +225,10 @@
 
         .bdr-bottom {
             border-bottom: 1px solid #333;
+        }
+
+        .brd-thick {
+            border-bottom: 2px solid #333;
         }
 
        </style>
@@ -289,7 +243,7 @@
           <th class="text-center spacer" colspan="3" scope="colgroup">Search ranking</th>
           <th class="text-center" colspan="3" scope="colgroup">Metadata includes search term</th>
         </tr>
-        <tr>
+        <tr class="brd-thick">
           <th class="text-center brdr-none" scope="col">Search term ⌄</th>
           <th class="text-center brdr-none" scope="col">Score ⌄</th>
           <th class="text-center group" scope="col">Google ⌄</th>
@@ -309,8 +263,19 @@
           <td class="bdr-bottom"><span class="pass-pill">Yes</span></td>
           <td class="bdr-bottom"><span class="pass-pill">Yes</span></td>
           <td class="bdr-right bdr-bottom"><span class="pass-pill">Yes</span></td>
-          <td class="bdr-bottom"><i class="fa-solid fa-square-plus"></i></td>
+          <td class="bdr-bottom"><i class="fa-solid fa-square-plus">+</i></td>
         </tr>
+        <tr>
+            <td class="bdr-right bdr-bottom">digital</td>
+            <td class="bdr-right bdr-bottom"><span class="fail-pill">Fail</span></td>
+            <td class="bdr-bottom">1</td>
+            <td class="bdr-bottom">1</td>
+            <td class="bdr-right bdr-bottom">1</td>
+            <td class="bdr-bottom"><span class="pass-pill">Yes</span></td>
+            <td class="bdr-bottom"><span class="partial-pill">Partial</span></td>
+            <td class="bdr-right bdr-bottom"><span class="fail-pill">No</span></td>
+            <td class="bdr-bottom"><i class="fa-solid fa-square-plus">+</i></td>
+          </tr>
       </table>
             
         </div>
@@ -367,78 +332,7 @@
     <script
         src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-1.13.10/b-2.4.2/b-html5-2.4.2/cr-1.7.0/fh-3.4.0/r-2.5.0/datatables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            new DataTable('#myTable', {
-                order: [[0, "desc"]],
-                processing: true,
-                lengthMenu: false,
-                orderCellsTop: true,
-                fixedHeader: true,
-                dom: 'Br<"table-responsive"t>tip',
-            });
-            var pageSelect = new SlimSelect({
-                select: "#pages",
-                settings: {
-                    hideSelected: true,
-                    keepOrder: true,
-                    placeholderText: "Custom Placeholder Text",
-                    closeOnSelect: false,
-                }
-            });
-            var start = moment().subtract(29, 'days');
-            var end = moment();
 
-            $("#dateRangePicker").daterangepicker(
-                {
-                    opens: "left",
-                    startDate: start,
-                    endDate: end,
-                    alwaysShowCalendars: true,
-                    locale: {
-                        format: "YYYY-MM-DD",
-                        cancelLabel: "Clear",
-                        applyLabel: "Apply",
-                    },
-                    ranges: {
-                        'Today': [moment(), moment()],
-                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                        'This Month': [moment().startOf('month'), moment().endOf('month')],
-                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                    }
-                },
-                function (start, end, label) {
-                    $("#dateRangePicker").val(
-                        start.format("YYYY-MM-DD") + " - " + end.format("YYYY-MM-DD")
-                    );
-                }
-            );
-            var start = moment().subtract(29, 'days');
-            var end = moment();
-
-
-        });
-    </script>
-
-<script>
-    (function( $, wb ) {
-"use strict";
-
-wb.doc.on( "click", "#overlay-open-btn", function( event ) {
-if ( event.stopPropagation ) {
-    event.stopImmediatePropagation();
-} else {
-    event.cancelBubble = true;
-}
-
-$( "#" + $( "#overlay-select" ).val() ).trigger( "open.wb-overlay" );
-});
-
-})( jQuery, wb );
-</script>
 
 </body>
 
