@@ -242,30 +242,48 @@
                 </table> 
        </div> -->
 
-       <table style="width: 100%">
+       <style>
+        .group-th th,  tr .group {
+            background-color: #f5f5f5;
+        }
+
+        .spacer {
+            border-right: 5px solid white;
+        }
+
+        .pass-pill {
+            background-color: #bee5b2;
+            border-radius: 6px;
+            color: #204A17;
+            text-align: center;
+            font-weight:bold;        
+        }
+       </style>
+
+       <table style="width: 100%"  class="small mrgn-tp-lg text-center">
         <col>
         <colgroup span="2"></colgroup>
         <colgroup span="2"></colgroup>
-        <tr>
+        <tr class="group-th">
           <td rowspan="1"></td>
           <td rowspan="1"></td>
-          <th colspan="3" scope="colgroup">Search ranking</th>
-          <th colspan="3" scope="colgroup">Metadata includes search term</th>
+          <th class="text-center spacer" colspan="3" scope="colgroup">Search ranking</th>
+          <th class="text-center" colspan="3" scope="colgroup">Metadata includes search term</th>
         </tr>
         <tr>
-          <th scope="col">Search term ⌄</th>
-          <th scope="col">Score ⌄</th>
-          <th scope="col">Google ⌄</th>
-          <th scope="col">Internal ⌄</th>
-          <th scope="col">Internal - specific ⌄</th>
-          <th scope="col">Title tag ⌄</th>
-          <th scope="col">Description ⌄</th>
-          <th scope="col">Keyword ⌄</th>
-          <th scope="col"></th>
+          <th class="text-center" scope="col">Search term ⌄</th>
+          <th class="text-center" scope="col">Score ⌄</th>
+          <th class="text-center group" scope="col">Google ⌄</th>
+          <th class="text-center group" scope="col">Internal ⌄</th>
+          <th class="text-center group spacer" scope="col">Internal - specific ⌄</th>
+          <th class="text-center group" scope="col">Title tag ⌄</th>
+          <th class="text-center group" scope="col">Description ⌄</th>
+          <th class="text-center group" scope="col">Keyword ⌄</th>
+          <th class="text-center" style="width: 10%;" scope="col"></th>
         </tr>
         <tr>
           <td>cdap</td>
-          <td>Pass</td>
+          <td class="pass-pill">Pass</td>
           <td>1</td>
           <td>1</td>
           <td>1</td>
