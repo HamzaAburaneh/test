@@ -242,8 +242,9 @@
        </div> -->
 
        <style>
-        .group-th th,  tr .group {
+        .table .group-th th,  .table tr .group {
             background-color: #f5f5f5;
+            border-top: none;
         }
 
         .spacer {
@@ -255,210 +256,64 @@
             border-radius: 6px;
             color: #204A17;
             text-align: center;
-            font-weight:bold;        
+            font-weight:bold;
+            padding: 5px 15px 5px 15px;
         }
+
+        .table .brdr-none {
+            border-top: none;
+        }
+
+        .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+            padding: 10px;
+            line-height: 1.4375;
+            vertical-align: top;
+            border-top: 2px solid #333;
+        }
+        
+        .bdr-right {
+            border-right: 1px solid #333;
+        }
+
+        .bdr-bottom {
+            border-bottom: 1px solid #333;
+        }
+
        </style>
 
-       <table style="width: 100%"  class="small mrgn-tp-lg text-center">
+       <table style="width: 100%"  class="table small mrgn-tp-xl text-center">
         <col>
         <colgroup span="2"></colgroup>
         <colgroup span="2"></colgroup>
         <tr class="group-th">
-          <td rowspan="1"></td>
-          <td rowspan="1"></td>
+          <td class="brdr-none" rowspan="1"></td>
+          <td class="brdr-none" rowspan="1"></td>
           <th class="text-center spacer" colspan="3" scope="colgroup">Search ranking</th>
           <th class="text-center" colspan="3" scope="colgroup">Metadata includes search term</th>
         </tr>
         <tr>
-          <th class="text-center" scope="col">Search term ⌄</th>
-          <th class="text-center" scope="col">Score ⌄</th>
+          <th class="text-center brdr-none" scope="col">Search term ⌄</th>
+          <th class="text-center brdr-none" scope="col">Score ⌄</th>
           <th class="text-center group" scope="col">Google ⌄</th>
           <th class="text-center group" scope="col">Internal ⌄</th>
           <th class="text-center group spacer" scope="col">Internal - specific ⌄</th>
           <th class="text-center group" scope="col">Title tag ⌄</th>
           <th class="text-center group" scope="col">Description ⌄</th>
           <th class="text-center group" scope="col">Keyword ⌄</th>
-          <th class="text-center" style="width: 10%;" scope="col"></th>
+          <th class="text-center brdr-none" style="width: 10%;" scope="col"></th>
         </tr>
         <tr>
-          <td>cdap</td>
-          <td class="pass-pill">Pass</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-          <td>Yes</td>
-          <td>Yes</td>
-          <td>Yes</td>
-          <td>+</td>
+          <td class="bdr-right bdr-bottom">cdap</td>
+          <td class="bdr-right bdr-bottom"><span class="pass-pill">Pass</span></td>
+          <td class="bdr-bottom">1</td>
+          <td class="bdr-bottom">1</td>
+          <td class="bdr-right bdr-bottom">1</td>
+          <td class="bdr-bottom"><span class="pass-pill">Yes</span></td>
+          <td class="bdr-bottom"><span class="pass-pill">Yes</span></td>
+          <td class="bdr-right bdr-bottom"><span class="pass-pill">Yes</span></td>
+          <td class="bdr-bottom">+</td>
         </tr>
       </table>
-            <table _ngcontent-ng-c411005918="" class="gc-table table small mrgn-tp-xl">
-                <caption class="wb-inv" _ngcontent-ng-c411005918="">
-                    Search relevancy assessment based on top search terms
-                </caption>
-        
-                <thead _ngcontent-ng-c411005918="" class="small">
-                    <tr>
-                        <td rowspan="0"></td>
-                        <th colspan="3" scope="colgroup">Search ranking</th>
-                        <th colspan="3" scope="colgroup">Metadata includes search term</th>
-                        <td rowspan="0"></td>
-                      </tr>
-                    <th _ngcontent-ng-c411005918="" scope="col" class="col-sm-1 text-center">Search terms</th>
-                    <th _ngcontent-ng-c411005918="" scope="col" class="col-sm-1 text-center">Score</th>
-                    <th _ngcontent-ng-c411005918="" scope="col" class="col-sm-2 text-center">Google</th>
-                    <th _ngcontent-ng-c411005918="" scope="col" class="col-sm-1 text-center">Internal</th>
-                    <th _ngcontent-ng-c411005918="" scope="col" class="col-sm-1 text-center">Internal - specific</th>
-                    <th _ngcontent-ng-c411005918="" scope="col" class="col-sm-3 text-center">Title tag</th>
-                    <th _ngcontent-ng-c411005918="" scope="col" class="col-sm-2 text-center">Description</th>
-                    <th _ngcontent-ng-c411005918="" scope="col" class="col-sm-1 text-center">Keywords</th>
-                </thead>
-                
-                <tbody _ngcontent-ng-c411005918="" class="small">
-                    <tr _ngcontent-ng-c411005918="">
-                        <td _ngcontent-ng-c411005918="" data-label="Search Terms">corporations canada</td>
-                        <td _ngcontent-ng-c411005918="" data-label="Result" class="bg-success text-center">Pass</td>
-                        <!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Passing URL">
-                            <a _ngcontent-ng-c411005918="" href="/en/urlAssessment?source=ised&amp;lang=en&amp;url=https://ised-isde.canada.ca/site/corporations-canada/en">
-                                <small _ngcontent-ng-c411005918="">https://ised-isde.canada.ca/site/corporations-canada/en</small>
-                            </a>
-                        </td>
-                        <td _ngcontent-ng-c411005918="" data-label="Title" class="bg-success text-center small"><em>corporations</em> <em>canada</em></td>
-                        <!----><!----><!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Description" class="bg-success text-center small"><em>corporations</em> <em>canada</em> - homepage</td>
-                        <!----><!----><!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Keywords" class="bg-warning text-center small"><em>corporations</em> directorate</td>
-                        <!----><!----><!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Last Update"><small _ngcontent-ng-c411005918="">2022-10-02</small></td>
-                        <!----><!---->
-                    </tr>
-                    <tr _ngcontent-ng-c411005918="">
-                        <td _ngcontent-ng-c411005918="" data-label="Search Terms">cdap</td>
-                        <td _ngcontent-ng-c411005918="" data-label="Result" class="bg-danger text-center">Fail</td>
-                        <!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Passing URL">
-                            <a _ngcontent-ng-c411005918="" href="/en/urlAssessment?source=ised&amp;lang=en&amp;url=https://ised-isde.canada.ca/site/canada-digital-adoption-program/en">
-                                <small _ngcontent-ng-c411005918="">https://ised-isde.canada.ca/site/canada-digital-adoption-program/en</small>
-                            </a>
-                        </td>
-                        <td _ngcontent-ng-c411005918="" data-label="Title" class="bg-success text-center small">canada digital adoption program <em>(cdap)</em> | official site</td>
-                        <!----><!----><!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Description" class="bg-danger text-center small">canada digital adoption program - homepage</td>
-                        <!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Keywords" class="bg-danger text-center small"></td>
-                        <!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Last Update"><small _ngcontent-ng-c411005918="">2022-07-22</small></td>
-                        <!----><!---->
-                    </tr>
-                    <tr _ngcontent-ng-c411005918="">
-                        <td _ngcontent-ng-c411005918="" data-label="Search Terms">cipo</td>
-                        <td _ngcontent-ng-c411005918="" data-label="Result" class="bg-success text-center">Pass</td>
-                        <!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Passing URL">
-                            <a _ngcontent-ng-c411005918="" href="/en/urlAssessment?source=ised&amp;lang=en&amp;url=https://ised-isde.canada.ca/site/canadian-intellectual-property-office/en">
-                                <small _ngcontent-ng-c411005918="">https://ised-isde.canada.ca/site/canadian-intellectual-property-office/en</small>
-                            </a>
-                        </td>
-                        <td _ngcontent-ng-c411005918="" data-label="Title" class="bg-danger text-center small">canadian intellectual property office</td>
-                        <!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Description" class="bg-danger text-center small">canadian intellectual property office - homepage</td>
-                        <!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Keywords" class="bg-danger text-center small">canadian intellectual property office</td>
-                        <!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Last Update"><small _ngcontent-ng-c411005918="">2022-10-06</small></td>
-                        <!----><!---->
-                    </tr>
-                    <tr _ngcontent-ng-c411005918="">
-                        <td _ngcontent-ng-c411005918="" data-label="Search Terms">corporation canada</td>
-                        <td _ngcontent-ng-c411005918="" data-label="Result" class="bg-success text-center">Pass</td>
-                        <!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Passing URL">
-                            <a _ngcontent-ng-c411005918="" href="/en/urlAssessment?source=ised&amp;lang=en&amp;url=https://ised-isde.canada.ca/site/corporations-canada/en">
-                                <small _ngcontent-ng-c411005918="">https://ised-isde.canada.ca/site/corporations-canada/en</small>
-                            </a>
-                        </td>
-                        <td _ngcontent-ng-c411005918="" data-label="Title" class="bg-success text-center small"><em>corporations</em> <em>canada</em></td>
-                        <!----><!----><!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Description" class="bg-success text-center small"><em>corporations</em> <em>canada</em> - homepage</td>
-                        <!----><!----><!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Keywords" class="bg-warning text-center small"><em>corporations</em> directorate</td>
-                        <!----><!----><!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Last Update"><small _ngcontent-ng-c411005918="">2022-10-02</small></td>
-                        <!----><!---->
-                    </tr>
-                    <tr _ngcontent-ng-c411005918="">
-                        <td _ngcontent-ng-c411005918="" data-label="Search Terms">cdap grant</td>
-                        <td _ngcontent-ng-c411005918="" data-label="Result" class="bg-danger text-center">Fail</td>
-                        <!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Passing URL">
-                            <a _ngcontent-ng-c411005918="" href="/en/urlAssessment?source=ised&amp;lang=en&amp;url=https://ised-isde.canada.ca/site/canada-digital-adoption-program/en">
-                                <small _ngcontent-ng-c411005918="">https://ised-isde.canada.ca/site/canada-digital-adoption-program/en</small>
-                            </a>
-                        </td>
-                        <td _ngcontent-ng-c411005918="" data-label="Title" class="bg-warning text-center small">canada digital adoption program <em>(cdap)</em> | official site</td>
-                        <!----><!----><!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Description" class="bg-danger text-center small">canada digital adoption program - homepage</td>
-                        <!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Keywords" class="bg-danger text-center small"></td>
-                        <!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Last Update"><small _ngcontent-ng-c411005918="">2022-07-22</small></td>
-                        <!----><!---->
-                    </tr>
-                    <tr _ngcontent-ng-c411005918="">
-                        <td _ngcontent-ng-c411005918="" data-label="Search Terms">canada digital adoption program</td>
-                        <td _ngcontent-ng-c411005918="" data-label="Result" class="bg-danger text-center">Fail</td>
-                        <!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Passing URL">
-                            <a _ngcontent-ng-c411005918="" href="/en/urlAssessment?source=ised&amp;lang=en&amp;url=https://ised-isde.canada.ca/site/canada-digital-adoption-program/en">
-                                <small _ngcontent-ng-c411005918="">https://ised-isde.canada.ca/site/canada-digital-adoption-program/en</small>
-                            </a>
-                        </td>
-                        <td _ngcontent-ng-c411005918="" data-label="Title" class="bg-success text-center small"><em>canada</em> <em>digital</em> <em>adoption</em> <em>program</em> (cdap) | official site</td>
-                        <!----><!----><!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Description" class="bg-success text-center small"><em>canada</em> <em>digital</em> <em>adoption</em> <em>program</em> - homepage</td>
-                        <!----><!----><!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Keywords" class="bg-danger text-center small"></td>
-                        <!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Last Update"><small _ngcontent-ng-c411005918="">2022-07-22</small></td>
-                        <!----><!---->
-                    </tr>
-                    <tr _ngcontent-ng-c411005918="">
-                        <td _ngcontent-ng-c411005918="" data-label="Search Terms">ised</td>
-                        <td _ngcontent-ng-c411005918="" data-label="Result" class="bg-danger text-center">Fail</td>
-                        <!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Passing URL">
-                            <a _ngcontent-ng-c411005918="" href="/en/urlAssessment?source=ised&amp;lang=en&amp;url=https://ised-isde.canada.ca/site/ised/en"><small _ngcontent-ng-c411005918="">https://ised-isde.canada.ca/site/ised/en</small></a>
-                        </td>
-                        <td _ngcontent-ng-c411005918="" data-label="Title" class="bg-danger text-center small">innovation, science and economic development canada | official site</td>
-                        <!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Description" class="bg-danger text-center small">innovation, science and economic development canada - homepage</td>
-                        <!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Keywords" class="bg-danger text-center small"></td>
-                        <!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Last Update"><small _ngcontent-ng-c411005918="">2024-03-04</small></td>
-                        <!----><!---->
-                    </tr>
-                    <tr _ngcontent-ng-c411005918="">
-                        <td _ngcontent-ng-c411005918="" data-label="Search Terms">strategic science fund</td>
-                        <td _ngcontent-ng-c411005918="" data-label="Result" class="bg-success text-center">Pass</td>
-                        <!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Passing URL">
-                            <a _ngcontent-ng-c411005918="" href="/en/urlAssessment?source=ised&amp;lang=en&amp;url=https://ised-isde.canada.ca/site/strategic-science-fund/en">
-                                <small _ngcontent-ng-c411005918="">https://ised-isde.canada.ca/site/strategic-science-fund/en</small>
-                            </a>
-                        </td>
-                        <td _ngcontent-ng-c411005918="" data-label="Title" class="bg-success text-center small"><em>strategic</em> <em>science</em> <em>fund</em></td>
-                        <!----><!----><!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Description" class="bg-success text-center small"><em>strategic</em> <em>science</em> <em>fund</em> - homepage</td>
-                        <!----><!----><!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Keywords" class="bg-danger text-center small"></td>
-                        <!----><!----><!---->
-                        <td _ngcontent-ng-c411005918="" data-label="Last Update"><small _ngcontent-ng-c411005918="">2023-12-06</small></td>
-                        <!----><!---->
-                    </tr>
-                </tbody>
-            </table>
             
         </div>
         </div>
