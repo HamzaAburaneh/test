@@ -242,6 +242,11 @@
             border-bottom: 2px solid #333;
         }
 
+        .table .open td {
+            border-bottom: none !important;
+            border-top: none !important;
+        }
+
        </style>
 
        <table style="width: 100%"  class="table small mrgn-tp-xl text-center">
@@ -276,7 +281,7 @@
           <td class="bdr-right bdr-bottom"><span class="pass-pill">Yes</span></td>
           <td class="bdr-bottom"><i class="fa-solid fa-square-plus">+</i></td>
         </tr>
-        <tr>
+        <tr class="open">
             <td class="bdr-right bdr-bottom">digital</td>
             <td class="bdr-right bdr-bottom"><span class="fail-pill">Fail</span></td>
             <td class="bdr-bottom">1</td>
@@ -287,19 +292,27 @@
             <td class="bdr-right bdr-bottom"><span class="fail-pill">No</span></td>
             <td class="bdr-bottom"><i class="fa-solid fa-square-plus">+</i></td>
           </tr>
+
+          <tr class="open">
+            <td class="brdr-none" rowspan="1"></td>
+
+            <td rowspan="7" colspan="7" style="text-align: left !important;">
+           <!-- example of what expands out -->
+           <h2 class="h4">Target URL</h2>
+           <p></p>
+
+           <h2 class="h4">Action list</h2>
+           <p></p>
+
+           <h2 class="h4">Metadata analysis</h2>
+           <p></p>
+
+           <h2 class="h4">What pages outrank me?</h2>
+           <p></p>
+        </td>
+        </tr>
       </table>
-            <!-- example of what expands out -->
-            <h2 class="h4">Target URL</h2>
-            <p></p>
-
-            <h2 class="h4">Action list</h2>
-            <p></p>
-
-            <h2 class="h4">Metadata analysis</h2>
-            <p></p>
-
-            <h2 class="h4">What pages outrank me?</h2>
-            <p></p>
+           
         </div>
         </div>
         </main>
