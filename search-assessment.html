@@ -208,6 +208,7 @@
             text-align: center;
             font-weight:bold;
             padding: 6px 18px 6px 18px;
+            margin: 4px;
         }
 
         .partial-pill {
@@ -219,6 +220,13 @@
             padding: 6px;
         }
         
+        .grey-pill {
+            background-color: #f5f5f5;
+            border-radius: 6px;
+            color: #333;
+            padding: 6px 15px 6px 15px;
+            max-width: 96%
+        }
 
         .table .brdr-none {
             border-top: none;
@@ -245,6 +253,10 @@
         .table .open td {
             border-bottom: none !important;
             border-top: none !important;
+        }
+
+        .open h2 {
+            border-bottom: 2px solid #333;
         }
 
        </style>
@@ -279,7 +291,7 @@
           <td class="bdr-bottom"><span class="pass-pill">Yes</span></td>
           <td class="bdr-bottom"><span class="pass-pill">Yes</span></td>
           <td class="bdr-right bdr-bottom"><span class="pass-pill">Yes</span></td>
-          <td class="bdr-bottom"><i class="fa-solid fa-square-plus">+</i></td>
+          <td class="bdr-bottom"><mark><i class="fa-solid fa-square-plus">+</i></mark></td>
         </tr>
         <tr class="open">
             <td class="bdr-right bdr-bottom">digital</td>
@@ -290,7 +302,7 @@
             <td class="bdr-bottom"><span class="pass-pill">Yes</span></td>
             <td class="bdr-bottom"><span class="partial-pill">Partial</span></td>
             <td class="bdr-right bdr-bottom"><span class="fail-pill">No</span></td>
-            <td class="bdr-bottom"><i class="fa-solid fa-square-plus">+</i></td>
+            <td class="bdr-bottom"><mark><i class="fa-solid fa-square-minus">-</i></mark></td>
           </tr>
 
           <tr class="open">
@@ -299,20 +311,82 @@
             <td rowspan="7" colspan="7" style="text-align: left !important;">
            <!-- example of what expands out -->
            <h2 class="h4">Target URL</h2>
-           <p></p>
+           <p>https://ised-isde.canada.ca/site/ised/en</p>
 
            <h2 class="h4">Action list</h2>
-           <p></p>
-
+           <input type="checkbox" id="fix1" name="fix1" value="fix1">
+           <label class="fail-pill" for="fix1"> Update "Page description" - include <b>digital</b> within the first 120 characters</label><br>
+           <input type="checkbox" id="fix2" name="fix2" value="fix2">
+           <label class="fail-pill" for="fix2"> Update "Keywords" - include <b>digital</b> within the first 120 characters</label><br>
            <h2 class="h4">Metadata analysis</h2>
-           <p></p>
+            <section>
+                <div class="col-md-2">
+                    <div class="row">
+                    <p><b>Page title</b></p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <p class="grey-pill">canada digital adoption program <b>(digital)</b> | official site </p>
+                        <p><mark>[✔]</mark> Search term in the title: <b>digital</b></p>
+                    </div>
+                 </div>
+                <div class="col-md-2">
+                    <div class="row">
+                        <p><a href="#">Title guidance</a></p>
+                    </div>
+                </div>
+            </section>
+            <div class="clearfix"></div>
+            <section style="border-top: 1px solid #333; padding-top: 12px;">
+                <div class="col-md-2">
+                    <div class="row">
+                    <p><b>Page description</b></p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <p class="grey-pill">canada digital adoption program (digital) - homepage </p>
+                        <p><mark>[X]</mark> Search term not within the first 120 characters: <b>digital</b></p>
+                    </div>
+                 </div>
+                <div class="col-md-2">
+                    <div class="row">
+                        <p><a href="#">Description guidance</a></p>
+                    </div>
+                </div>
+            </section>
+            <div class="clearfix"></div>
+            <section style="border-top: 1px solid #333; padding-top: 12px;">
+                <div class="col-md-2">
+                    <div class="row">
+                    <p><b>Keywords</b></p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <p class="grey-pill"> </p>
+                        <p><mark>[X]</mark> Search term not included <b>digital</b></p>
+                    </div>
+                 </div>
+                <div class="col-md-2">
+                    <div class="row">
+                        <p><a href="#">Keywords guidance</a></p>
+                    </div>
+                </div>
+            </section>
+    <div class="clearfix"></div>
 
            <h2 class="h4">What pages outrank me?</h2>
-           <p></p>
+           <p><a href="#">Search results - Google.com <mark>[>]</mark></a><br>
+                <a href="#">Search results - Canada.ca (all pages) <mark>[>]</mark></a><br>
+                <a href="#">Search results - Canada.ca (ISED page) <mark>[>]</mark></a></p>
         </td>
         </tr>
+        <td class="brdr-none" rowspan="1"></td>
       </table>
-           
+      <mark>search continues...</mark>
+    
         </div>
         </div>
         </main>
