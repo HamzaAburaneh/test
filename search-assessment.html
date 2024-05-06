@@ -307,13 +307,14 @@
             <td class="bdr-bottom"><span class="pass-pill">Yes</span></td>
             <td class="bdr-bottom"><span class="partial-pill">Partial</span></td>
             <td class="bdr-right bdr-bottom"><span class="fail-pill">No</span></td>
-            <td class="bdr-bottom"><mark><i class="fa-solid fa-square-minus">-</i></mark></td>
+            <td class="bdr-bottom"><i onclick="toggleDiv()" class="fa-solid fa-square-minus"><mark>click me for demo</mark></i>
+            </td>
           </tr>
 
           <tr class="open">
             <td class="brdr-none" rowspan="1"></td>
 
-            <td rowspan="7" colspan="7" style="text-align: left !important;">
+            <td id="detail-sa" class="wb-inv" rowspan="7" colspan="7" style="text-align: left !important;">
            <!-- example of what expands out -->
            <h2 class="h4">Target URL</h2>
            <p>https://ised-isde.canada.ca/site/ised/en</p>
@@ -447,7 +448,12 @@
     <script
         src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-1.13.10/b-2.4.2/b-html5-2.4.2/cr-1.7.0/fh-3.4.0/r-2.5.0/datatables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-
+    <script>
+        function toggleDiv() {
+          var div = document.getElementById("detail-sa");
+          div.classList.toggle("wb-inv");
+        }
+        </script>
 
 </body>
 
