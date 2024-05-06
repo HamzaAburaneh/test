@@ -61,7 +61,6 @@
     </script>
     <div>
 
-        <mark>font awesome icons won't work for table =( with CDTS, can't figure it out yet</mark>
         <main class="container">
             <div class="col-lg-12">
                 <div class="row">
@@ -89,6 +88,7 @@
     <style>
         .feedback-tool { 
             grid-template-columns: 0fr .7fr 3fr !important;
+            padding-bottom: 6px;
         }
 
         .feedback-tool input, .feedback-tool select {
@@ -99,29 +99,29 @@
         .score {
             border: solid black 1px;
             border-radius: 6px;
-            padding: 2em 2em .5em 2em;
+            padding: 1em 1em 0em 1em;
             text-align: center;
         }
         .score h2 {
-            font-size: 24px;
-            margin-top: 0px;
-            padding-bottom: 10px;
+            font-size: 20px;
+            margin-top: 6px;
+            padding-bottom: 0px;
         }
 
         .r-prcnt {
-            font-size: 56px;
+            font-size: 42px;
             font-weight: bold;
         }
         .pass {
             background-color: #bee5b2;
-            padding: 1em;
+            padding: .5em;
             border-radius: 6px;
             color: #204A17;
 
         }
         .fail {
             background-color: #e6aeae;
-            padding: 1em;
+            padding: .5em;
             border-radius: 6px;
             color: #561A1A;
         }
@@ -135,12 +135,13 @@
         }
    
         .equal {
-            font-size: 56px;
+            font-size: 46px;
         }
 
         .num {
-            font-size: 40px;
+            font-size: 32px;
             font-weight: bold;
+            margin-bottom: 0px;
         }
 
         @media only screen and (min-width: 768px) {
@@ -165,13 +166,13 @@
         <div class="col-md-8">
         <div class="col-md-6 mrgn-bttm-sm mrgn-tp-sm">
             <div class="col-md-12 pass">
-                <h3 class="mrgn-tp-0"># of PASS</h3>
+                <h3 class="mrgn-tp-0 h4"># of PASS</h3>
                 <p class="num">1</p>
             </div>        
         </div>
         <div class="col-md-6 mrgn-bttm-sm mrgn-tp-sm">
             <div class="col-md-12 fail">
-                <h3 class="mrgn-tp-0"># of FAIL</h3>
+                <h3 class="mrgn-tp-0 h4"># of FAIL</h3>
                 <p class="num">3</p>
             </div>
         </div>
@@ -265,7 +266,7 @@
 
        </style>
 
-       <table style="width: 100%"  class="table small mrgn-tp-xl text-center">
+       <table style="width: 100%"  class="table small mrgn-tp-lg text-center">
         <col>
         <colgroup span="2"></colgroup>
         <colgroup span="2"></colgroup>
@@ -390,7 +391,8 @@
         <td class="brdr-none" rowspan="1"></td>
       </table>
       <mark>search continues...</mark>
-    
+      <mark>font awesome icons won't work for table =( with CDTS, can't figure it out yet</mark>
+
         </div>
         </div>
         </main>
