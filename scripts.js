@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    // Initialize WET components
-    wb.init();
+    // // Initialize WET components
+    // wb.init();
 
     (function ($, window, wb) {
         "use strict";
