@@ -1,7 +1,7 @@
 
     (function ($, window, wb) {
         "use strict";
-        var componentName = "gc-pft",
+        var componentName = "gc-pft-prblm",
             selector = "#" + componentName,
             initEvent = "wb-init" + selector,
             $document = wb.doc,
