@@ -1,6 +1,3 @@
-$(document).ready(function () {
-    // // Initialize WET components
-    // wb.init();
 
     (function ($, window, wb) {
         "use strict";
@@ -62,4 +59,3 @@ $(document).ready(function () {
         $document.on("timerpoke.wb " + initEvent, selector, init);
         wb.add(selector);
     })(jQuery, window, wb);
-});
