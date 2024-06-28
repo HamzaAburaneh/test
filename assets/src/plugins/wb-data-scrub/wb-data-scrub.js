@@ -99,7 +99,7 @@
                       "</div>" +
                       "<div class='modal-footer'>" +
                       "<ul class='list-inline pull-left text-left'>" +
-                        "<li><button class='btn btn-primary popup-modal-dismiss' data-wbscrub-cancel>" + cancelBtn + "</button></li>" +
+                        "<li><button class='btn btn-primary popup-modal-dismiss'>" + cancelBtn + "</button></li>" +
                         "<li><button class='btn btn-link popup-modal-dismiss' data-wbscrub-submit>" + yesBtn + "</button></li>" +
                       "</ul></div></section>";
           moDal.appendChild( tpl );
@@ -118,16 +118,13 @@
           }
   
           $( "[data-wbscrub-submit]", wrapper ).click( function() {
-            checkFormValues( true );
-            event.target.submit();
+            if ( !isPii ) {
+              event.target.submit();
+            } else {
+              checkFormValues( true );
+              event.target.submit();
+            }
           } );
-  
-          $( "[data-wbscrub-cancel]", wrapper ).click( function( e ) {
-            e.preventDefault();
-            // Close the modal and do not submit the form
-            $( wrapper ).trigger( "close.wb-lbx" );
-          } );
-  
           if ( !isPii ) {
             event.currentTarget.submit();
           }
